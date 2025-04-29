@@ -10,7 +10,9 @@ export class QuestionsClient {
   }
 
   async getQuestionOfTheDay(): Promise<QuestionModel> {
-    const response = await this.baseAPIClient.get('/questions/daily');
+    // Gets the current date in YYYY-MM-DD format using browser timezone
+    const currentDate = new Intl.DateTimeFormat('en-CA').format(new Date());
+    const response = await this.baseAPIClient.get('/questions/daily', { params: { requested_date: currentDate } });
     return response.data;
   }
 }
