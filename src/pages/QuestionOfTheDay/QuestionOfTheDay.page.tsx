@@ -62,7 +62,7 @@ export const QuestionOfTheDayPage = () => {
 
           <Stack gap="xs">
             {questionOfTheDay.questions.map((q, idx) => (
-              <>
+              <div key={idx}>
                 {q.question?.map((qText, i) => (
                   <Text key={i} fw="normal" fs="italic" size="md">
                     {q.letter && (
@@ -85,7 +85,7 @@ export const QuestionOfTheDayPage = () => {
                     {q.authors.join(", ")}
                   </Text>
                 )}
-              </>
+              </div>
             ))}
 
             {questionOfTheDay.comment && (
