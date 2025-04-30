@@ -11,7 +11,7 @@ export class QuestionsClient {
   }
 
   async getQuestionOfTheDay(): Promise<QuestionModel> {
-    const currentDate = getCurrentDateString("en-US");  // YYYY-MM-DD
+    const currentDate = getCurrentDateString("en-CA");  // YYYY-MM-DD
     const response = await this.baseAPIClient.get('/questions/daily', { params: { requested_date: currentDate } });
     return response.data;
   }
