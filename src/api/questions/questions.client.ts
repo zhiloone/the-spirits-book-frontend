@@ -1,6 +1,7 @@
 import { AxiosInstance } from "axios";
 import { baseAPIClient } from "../baseAPI.client";
 import { QuestionModel } from "./questions.types";
+import { getCurrentDateString } from "@/utils";
 
 export class QuestionsClient {
   baseAPIClient: AxiosInstance
@@ -10,8 +11,7 @@ export class QuestionsClient {
   }
 
   async getQuestionOfTheDay(): Promise<QuestionModel> {
-    // Gets the current date in YYYY-MM-DD format using browser timezone
-    const currentDate = new Intl.DateTimeFormat('en-CA').format(new Date());
+    const currentDate = getCurrentDateString("en-US");  // YYYY-MM-DD
     const response = await this.baseAPIClient.get('/questions/daily', { params: { requested_date: currentDate } });
     return response.data;
   }

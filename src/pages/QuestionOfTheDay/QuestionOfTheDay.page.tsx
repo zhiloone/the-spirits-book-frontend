@@ -1,5 +1,6 @@
 import { QuestionsClient } from "@/api/questions/questions.client";
 import { QuestionModel } from "@/api/questions/questions.types";
+import { getCurrentDateString } from "@/utils";
 import { Container, Title, Text, Paper, Loader, Center, Stack, Divider, Box, Flex } from "@mantine/core";
 import { useQuery } from "@tanstack/react-query";
 
@@ -13,6 +14,8 @@ export const QuestionOfTheDayPage = () => {
     queryKey: ["daily-question"],
     queryFn: fetchQuestionOfTheDay,
   });
+
+  const currentDate = getCurrentDateString("pt-BR");  // DD/MM/YYYY
 
   if (isLoading) {
     return (
@@ -29,7 +32,7 @@ export const QuestionOfTheDayPage = () => {
   return (
     <Container size="sm" py="xl">
       <Title order={1} ta="center" c="black">
-        Pergunta do Dia
+        Pergunta do Dia - {currentDate}
       </Title>
 
       <Paper
