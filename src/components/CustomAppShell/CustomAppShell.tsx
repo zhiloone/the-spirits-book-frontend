@@ -10,8 +10,8 @@ export const CustomAppShell = () => {
     >
       <AppShell.Header>
         <Group h="100%" px="md">
-          <Title fz={24}>
-            O LIVRO DOS ESPÍRITOS - WEB
+          <Title order={3}>
+            O Livro dos Espíritos - Web
           </Title>
         </Group>
       </AppShell.Header>
@@ -23,7 +23,7 @@ export const CustomAppShell = () => {
       <AppShell.Footer>
         <Group h="100%" px="md">
           <Text fz="xs" ta="center">
-            Conteúdo baseado em <a href="https://www.febnet.org.br/wp-content/uploads/2012/07/WEB-Livro-dos-Esp%C3%ADritos-Guillon-1.pdf" target="_blank" rel="noopener noreferrer">O Livro dos Espíritos</a>, de Allan Kardec — disponível gratuitamente pela <a href="https://www.febnet.org.br" target="_blank" rel="noopener noreferrer">FEB</a>.
+            Conteúdo baseado em <a href="https://www.febnet.org.br/wp-content/uploads/2012/07/WEB-Livro-dos-Esp%C3%ADritos-Guillon-1.pdf" target="_blank" rel="noopener noreferrer">O Livro dos Espíritos</a>, de Allan Kardec — disponível gratuitamente pela <a href="https://www.febnet.org.br" target="_blank" rel="noopener noreferrer">Federação Espírita Brasileira</a>.
           </Text>
         </Group>
       </AppShell.Footer>
