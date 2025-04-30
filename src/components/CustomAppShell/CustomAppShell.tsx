@@ -12,7 +12,7 @@ export const CustomAppShell = () => {
       <AppShell.Header>
         <Group h="100%" px="md">
           <Title fz={24}>
-            O LIVRO DOS ESPÍRITOS
+            O LIVRO DOS ESPÍRITOS - WEB
           </Title>
         </Group>
       </AppShell.Header>
