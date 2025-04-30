@@ -19,7 +19,7 @@ export const QuestionOfTheDayPage = () => {
 
   if (isLoading) {
     return (
-      <Center h="100vh">
+      <Center h="calc(100vh - 160px)">
         <Loader size="lg" />
       </Center>
     );
@@ -38,7 +38,7 @@ export const QuestionOfTheDayPage = () => {
       <Paper
         withBorder
         shadow="md"
-        p="md"
+        p="lg"
         my="xl"
         radius="md"
       >
